@@ -1,0 +1,21 @@
+# 研报财务数据纠错 —— 统一依赖清单（阶段一 + 阶段二共用）
+#
+# 安装：
+#   python -m pip install -r requirements.txt
+#
+# 运行环境：Python >= 3.10（代码使用 PEP 604 的 `X | None` 类型注解）
+# 开发与验证环境：Python 3.13.5
+#
+# 说明：
+#   - pdfplumber 读取 PDF 文本层；扫描版（图片型）年报需先 OCR 才能提取。
+#   - openai 用于访问兼容 OpenAI 协议的 DeepSeek 接口；
+#     未配置 DEEPSEEK_API_KEY 时相关环节会自动降级为规则版输出，不影响主流程。
+
+pandas>=2.0
+pdfplumber>=0.10
+openai>=1.30
+python-docx>=1.1
+
+# ---- 可选依赖 ----
+# 用于自动加载项目根的 .env 文件（不装也可以，改用系统环境变量即可）
+# python-dotenv>=1.0

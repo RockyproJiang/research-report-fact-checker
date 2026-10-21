@@ -1,0 +1,9 @@
+# 阶段一（年报基准库）依赖
+# 与项目根 requirements.txt 保持一致，可直接用根目录清单安装：
+#   python -m pip install -r ../requirements.txt
+#
+# 运行环境：Python >= 3.10
+
+pandas>=2.0
+pdfplumber>=0.10
+openai>=1.30
